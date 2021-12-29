@@ -25,7 +25,7 @@ if (process.env.SERVER_PRODUCTION === 'FALSE') {
   process.env.TOKEN_EXPIRES = 86400;
   console.warn(`\n=========================================DEVELOPMENT=========================================\n` +
     `| DON'T FORGET TO CHANGE \".env\\SERVER_PRODUCTION\" TO \"TRUE\" BEFORE SUBMITTING TO PRODUCTION |\n` +
-    `|===========================================================================================|\n`);
+    `=============================================================================================\n`);
 }
 
 function verifyJWT(req, res, next) {

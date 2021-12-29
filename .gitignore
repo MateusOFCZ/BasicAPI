@@ -1,2 +1,6 @@
 node_modules
 package.json
+.env
+public.key
+private.key
+config.json
