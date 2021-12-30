@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 29-Dez-2021 às 19:15
+-- Generation Time: 30-Dez-2021 às 19:32
 -- Versão do servidor: 10.1.36-MariaDB
 -- versão do PHP: 7.2.10
 
@@ -27,7 +27,30 @@ USE `jwt_api`;
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `register_codes`
+--
+-- Criação: 30-Dez-2021 às 15:08
+--
+
+CREATE TABLE IF NOT EXISTS `register_codes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `code` varchar(255) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(300) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `token_blacklist`
+--
+-- Criação: 29-Dez-2021 às 19:44
 --
 
 CREATE TABLE IF NOT EXISTS `token_blacklist` (
@@ -45,6 +68,8 @@ CREATE TABLE IF NOT EXISTS `token_blacklist` (
 --
 -- Estrutura da tabela `users`
 --
+-- Criação: 30-Dez-2021 às 15:11
+--
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -59,6 +84,12 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Limitadores para a tabela `register_codes`
+--
+ALTER TABLE `register_codes`
+  ADD CONSTRAINT `register_codes_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Limitadores para a tabela `token_blacklist`
