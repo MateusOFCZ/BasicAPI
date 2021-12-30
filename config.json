@@ -1,5 +1,7 @@
 {
     "PROTOCOL": "http://",
     "HOST": "localhost",
-    "PATH": "/api"
+    "PATH": "",
+    "DOMAIN": ".com",
+    "SITE_NAME": "Basic API JWT"
 }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                width: 100%;
+                background-color: #e8e8e8;
+                padding-left: 2vw;
+                padding-right: 2vw;
+                padding-bottom: 4vw;
+                padding-top: 0.1vw;
+                border-radius: 2vw;
+                font-size: 1vw;
+                font-family: Arial;
+                display: block;
+            }
+
+            .name {
+                color: #00c90a;
+                font-size: 2vw;
+                position: relative;
+            }
+
+            .bottom {
+                font-weight: bold;
+                border-radius: 1vw;
+                color: #FFFFFF;
+                background-color: #00c90a;
+                text-decoration: none;
+                cursor: pointer;
+                padding: 1vw 4vw;
+                border: 0vw;
+                transition: all 500ms;
+            }
+
+            .bottom:hover {
+                font-weight: bold;
+                border-radius: 1vw;
+                color: #FFFFFF;
+                background-color: #00dd0b;
+                text-decoration: none;
+                cursor: pointer;
+                padding: 1vw 4vw;
+                border: 0vw;
+            }
+
+            .link a:link {
+                text-decoration: none;
+                color: #8d8d8d;
+                transition: all 500ms;
+            }
+
+            .link a:hover {
+                text-decoration: none;
+                color: #707070;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="name">Olá <b>%USERNAME%</b>,</p>
+        <p>Seja bem vindo(a) ao <b>%SITE_NAME%</b>, para fazer o login clique no botão abaixo e utilize seus dados de acesso.</p>
+        <p><b>E-Mail:</b> %USER_EMAIL%</p>
+        <p><b>Senha:</b> %USER_PASSWORD%</p>
+        <br><br><br><br>
+        <center><a type='button' class="bottom" target='_blank' href='%LINK_LOGIN%'>ENTRAR</a></center>
+        <br><br>
+        <center><p class="link"><a href='%LINK_LOGIN%'>%LINK_LOGIN%</a></p></center>
+    </body>
+</html>
