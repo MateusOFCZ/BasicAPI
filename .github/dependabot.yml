@@ -4,9 +4,9 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      assignees:
-        - "MateusOFCZ"
-      reviewers:
-        - "MateusOFCZ"
+    assignees:
+      - "MateusOFCZ"
+    reviewers:
+      - "MateusOFCZ"
     labels:
       - "Waiting"
